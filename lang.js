@@ -39,7 +39,7 @@ const translations = {
         edu_cert_title: "Harvard's CS50x",
         edu_cert_desc: "Introduction to Computer Science",
         edu_cert_title: "Harvard's CS50x", edu_cert_desc: "Introduction to Computer Science",
-        skills_title: "Core Competencies", skill_prog: "Programming", skill_prog_desc: "Python (Intermediate)",
+        skills_title: "Core Competencies", skill_prog: "Programming", skill_prog_desc: "Python (Proficient), HTML & CSS (Intermediate)",
         skill_soft: "Software", skill_soft_desc: "Microsoft Office (Excel, Word, PowerPoint)", skill_fin: "Financial Management", skill_fin_desc: "Accounting, Tax Prep, Budgeting",
         skill_lang: "Languages", skill_lang_desc: "English (C2), Polish (C2), Dutch (CEFR-Level B1+)",
         contact_title: "Let's Connect", contact_subtitle: "I am eager to leverage this blend of economic theory and practical data analysis in a finance or data-driven role.",
