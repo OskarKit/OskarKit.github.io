@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Oskar Kitson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="nav-brand">OK.</a>
+                <div class="nav-links" style="display: flex; align-items: center;">
+                    <a href="index.html" data-i18n="nav_profile">Profile</a>
+                    <a href="experience.html" data-i18n="nav_experience">Experience</a>
+                    <a href="projects.html" data-i18n="nav_projects">Projects</a>
+                    <a href="education.html" data-i18n="nav_education">Education</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contact</a>
+
+                    <!--div class="lang-switcher">
+                        <button id="btn-en" class="lang-btn active">EN</button>
+                        <button id="btn-nl" class="lang-btn">NL</button>
+                        <button id="btn-pl" class="lang-btn">PL</button>
+                    </div-->
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="section-title" data-i18n="edu_title">Academic Background</h1>
+
+        <div class="grid-2">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">Sept 2024 - Present</span>
+                    <h2 data-i18n="edu_uva_title">University of Amsterdam</h2>
+                    <h3 style="font-size: 1.1rem; color: var(--text-secondary); font-family: 'Inter', sans-serif;" data-i18n="edu_uva_subtitle">BSc Economics<br><em>Currently pursuing honours | <strong>GPA: 7.65</strong></em></h3>
+                    <p class="text-block" data-i18n="edu_uva_desc"><strong>Relevant Coursework:</strong> Statistics 1 & 2, Finance 1 & 2 for Economics, Financial Accounting 1...</p>
+                    <img src="photos/university-of-amsterdam.png" alt="University Campus" class="timeline-img">
+                </div>
+
+                <div class="timeline-item" style="margin-top: 40px;">
+                    <span class="timeline-date" data-i18n="edu_hs_date">Sept 2019 - May 2023</span>
+                    <h2 data-i18n="edu_hs_title">III Liceum Ogólnokształcące | Gdynia, Poland</h2>
+                    <h3 style="font-size: 1.1rem; color: var(--text-secondary); font-family: 'Inter', sans-serif;" data-i18n="edu_hs_subtitle">International Baccalaureate (IB) Diploma</h3>
+                    <p class="text-block" data-i18n="edu_hs_desc" style="margin-bottom: 0;"><strong>Key Subjects:</strong> Mathematics AA HL (6/7), Geography HL (6/7), English B HL (7/7).<br><em>Graduated with honours.</em></p>
+                </div>
+            </div>
+
+            <div>
+                <h2 data-i18n="skills_title">Core Competencies</h2>
+                <ul class="skills-list" style="margin-top: 30px;">
+                    <li>
+                        <span class="skill-category" data-i18n="skill_prog">Programming</span>
+                        <span data-i18n="skill_prog_desc">Python, SQL (Intermediate)</span>
+                    </li>
+                    <li>
+                        <span class="skill-category" data-i18n="skill_soft">Software</span>
+                        <span data-i18n="skill_soft_desc">Microsoft Office (Excel, Word, PowerPoint)</span>
+                    </li>
+                    <li>
+                        <span class="skill-category" data-i18n="skill_fin">Financial Management</span>
+                        <span data-i18n="skill_fin_desc">Accounting, Tax Prep, Budgeting</span>
+                    </li>
+                    <li>
+                        <span class="skill-category" data-i18n="skill_lang">Languages</span>
+                        <span data-i18n="skill_lang_desc">English (C2), Polish (C2), Dutch (B1)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="font-size: 2.2rem; margin-top: 80px;" data-i18n="edu_add_title">Additional Certifications</h2>
+        <div class="grid-2" style="gap: 30px;">
+            <div style="background: var(--card-bg); padding: 30px; border-radius: 4px; border: 1px solid var(--border-color); border-left: 4px solid var(--text-secondary);">
+                <span class="timeline-date" style="color: var(--text-secondary);" data-i18n="edu_cert_date">2023</span>
+                <h3 style="font-size: 1.2rem; margin-bottom: 5px;" data-i18n="edu_cert_title">Harvard's CS50x</h3>
+                <p class="text-block" style="font-size: 0.95rem; margin-bottom: 0;" data-i18n="edu_cert_desc">Introduction to Computer Science</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Oskar Kitson. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="lang.js" charset="utf-8"></script>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.hostname === window.location.hostname && this.target !== '_blank' && !this.href.startsWith('mailto:')) {
+                    e.preventDefault();
+                    let target = this.href;
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => { window.location.href = target; }, 350);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

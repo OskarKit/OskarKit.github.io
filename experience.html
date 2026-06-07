@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Oskar Kitson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="nav-brand">OK.</a>
+                <div class="nav-links" style="display: flex; align-items: center;">
+                    <a href="index.html" class="active" data-i18n="nav_profile">Profile</a>
+                    <a href="experience.html" data-i18n="nav_experience">Experience</a>
+                    <a href="projects.html" data-i18n="nav_projects">Projects</a>
+                    <a href="education.html" data-i18n="nav_education">Education</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contact</a>
+
+                    <!--div class="lang-switcher">
+                        <button id="btn-en" class="lang-btn active">EN</button>
+                        <button id="btn-nl" class="lang-btn">NL</button>
+                        <button id="btn-pl" class="lang-btn">PL</button>
+                    </div-->
+                </div>
+            </div>
+        </nav>
+        <h1 class="section-title" data-i18n="exp_title">Professional Experience</h1>
+        <p class="lead-text" style="margin-bottom: 60px;" data-i18n="exp_subtitle">A track record of technical optimization, financial management, and leadership.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-date">Mar 2024 – Current</span>
+                <h2 data-i18n="exp_ai_title">Al Trainer & Related Sole-Proprietorship</h2>
+                <h3 style="font-size: 1.1rem; color: var(--text-secondary); font-family: 'Inter', sans-serif;" data-i18n="exp_ai_company">Data Annotation Tech</h3>
+                <p class="text-block" data-i18n="exp_ai_desc1"><strong>Model Optimization:</strong> Evaluate and vet unreleased features of industry-leading Al models...</p>
+                <p class="text-block" data-i18n="exp_ai_desc2"><strong>Technical Debugging:</strong> Analyse, verify, and debug Al-generated code.</p>
+                <p class="text-block" data-i18n="exp_ai_desc3"><strong>Business Management:</strong> Independently manage all operations...</p>
+                <img src="photos/image.png" alt="DA" class="timeline-img">
+
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">2023</span>
+                <h2 data-i18n="exp_trimun_title">Vice President & Finance Coordinator</h2>
+                <h3 style="font-size: 1.1rem; color: var(--text-secondary); font-family: 'Inter', sans-serif;" data-i18n="exp_trimun_company">TriMUN 2023 Conference</h3>
+                <p class="text-block" data-i18n="exp_trimun_desc">Co-organized a conference for over 200 international and domestic participants...</p>
+                <img src="https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Conference" class="timeline-img">
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">2022</span>
+                <h2 data-i18n="exp_cwmun_title">Delegate & Fundraising</h2>
+                <h3 style="font-size: 1.1rem; color: var(--text-secondary); font-family: 'Inter', sans-serif;" data-i18n="exp_cwmun_company">CWMUN New York</h3>
+                <p class="text-block" data-i18n="exp_cwmun_desc">Co-led a successful fundraising campaign...</p>
+                <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Group Photo" class="timeline-img">
+            </div>
+        </div>
+
+        <h2 class="section-title" style="font-size: 2.2rem; margin-top: 80px;" data-i18n="exp_add_title">Additional Work Experience</h2>
+        <div class="grid-2" style="gap: 30px;">
+            <div style="background: var(--card-bg); padding: 30px; border-radius: 4px; border: 1px solid var(--border-color); border-left: 4px solid var(--text-secondary);">
+                <span class="timeline-date" style="color: var(--text-secondary);">Sept 2023 – Jan 2024</span>
+                <h3 style="font-size: 1.2rem; margin-bottom: 5px;" data-i18n="exp_delivery_title">Food Delivery Driver</h3>
+                <p style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); margin-top: 0;" data-i18n="exp_delivery_company">Takeaway.com</p>
+                <p class="text-block" style="font-size: 0.95rem; margin-bottom: 0;" data-i18n="exp_delivery_desc">Demonstrated reliability and time management in a client-facing role.</p>
+            </div>
+
+            <div style="background: var(--card-bg); padding: 30px; border-radius: 4px; border: 1px solid var(--border-color); border-left: 4px solid var(--text-secondary);">
+                <span class="timeline-date" style="color: var(--text-secondary);">Jul 2020 – Sept 2024 (Seasonal)</span>
+                <h3 style="font-size: 1.2rem; margin-bottom: 5px;" data-i18n="exp_cleaning_title">Apartment Cleaning & Customer Service</h3>
+                <p style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); margin-top: 0;" data-i18n="exp_cleaning_company">Gdańsk, Poland</p>
+                <p class="text-block" style="font-size: 0.95rem; margin-bottom: 0;" data-i18n="exp_cleaning_desc">Took care of two rental properties...</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Oskar Kitson. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="lang.js" charset="utf-8"></script>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.hostname === window.location.hostname && this.target !== '_blank') {
+                    e.preventDefault();
+                    let target = this.href;
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => { window.location.href = target; }, 350);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

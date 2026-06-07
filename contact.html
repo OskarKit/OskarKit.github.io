@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Oskar Kitson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="nav-brand">OK.</a>
+                <div class="nav-links" style="display: flex; align-items: center;">
+                    <a href="index.html" class="active" data-i18n="nav_profile">Profile</a>
+                    <a href="experience.html" data-i18n="nav_experience">Experience</a>
+                    <a href="projects.html" data-i18n="nav_projects">Projects</a>
+                    <a href="education.html" data-i18n="nav_education">Education</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contact</a>
+
+                    <!--div class="lang-switcher">
+                        <button id="btn-en" class="lang-btn active">EN</button>
+                        <button id="btn-nl" class="lang-btn">NL</button>
+                        <button id="btn-pl" class="lang-btn">PL</button>
+                    </div-->
+                </div>
+            </div>
+        </nav>
+
+        <div class="contact-card-container">
+            <h1 class="contact-card-title" data-i18n="contact_title">Oskar Kitson</h1>
+            <p class="contact-card-subtitle" data-i18n="contact_subtitle">Amsterdam, Netherlands</p>
+
+            <a href="mailto:Oskar.kitson@gmail.com" class="btn-social" data-i18n="btn_email">
+                <span class="icon">✉</span> Email (Gmail)
+            </a>
+
+            <a href="https://www.linkedin.com/in/oskar-kitson-530921341/" target="_blank" class="btn-social" data-i18n="btn_linkedin">
+                <span class="icon">in</span> LinkedIn Profile
+            </a>
+
+            <a href="https://github.com/code50/160546343.git" target="_blank" class="btn-social" data-i18n="btn_github">
+                <span class="icon">&lt;/&gt;</span> GitHub Repository
+            </a>
+
+            <a href="CV English.F..pdf" target="_blank" class="btn-social" style="background: var(--accent-green); color: #fff; border-color: var(--accent-green);" data-i18n="btn_cv">
+                <span class="icon">📄</span> Download Resume
+            </a>
+
+            <div class="direct-contact">
+                <strong style="color: var(--text-primary);">Phone:</strong> +31 624800731
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Oskar Kitson. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="lang.js" charset="utf-8"></script>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Ignore page transitions for external links (target="_blank" or mailto:)
+                if (this.hostname === window.location.hostname && this.target !== '_blank' && !this.href.startsWith('mailto:')) {
+                    e.preventDefault();
+                    let target = this.href;
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => { window.location.href = target; }, 350);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

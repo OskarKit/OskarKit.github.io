@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Oskar Kitson</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="nav-brand">OK.</a>
+                <div class="nav-links" style="display: flex; align-items: center;">
+                    <a href="index.html" data-i18n="nav_profile">Profile</a>
+                    <a href="experience.html" data-i18n="nav_experience">Experience</a>
+                    <a href="projects.html" class="active" data-i18n="nav_projects">Projects</a>
+                    <a href="education.html" data-i18n="nav_education">Education</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contact</a>
+
+                    <!--div class="lang-switcher">
+                        <button id="btn-en" class="lang-btn active">EN</button>
+                        <button id="btn-nl" class="lang-btn">NL</button>
+                        <button id="btn-pl" class="lang-btn">PL</button>
+                    </div-->
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="section-title" data-i18n="proj_title">Featured Projects</h1>
+        <p class="lead-text" style="margin-bottom: 40px;" data-i18n="proj_subtitle">Bridging economic theory, data analysis, and software development.</p>
+
+        <div style="background: var(--card-bg); padding: 30px; border-radius: 4px; border: 1px solid var(--border-color); margin-bottom: 40px; position: relative;">
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                <h3 style="font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--text-secondary); margin: 0;">
+                    Interactive Data: Simulated Portfolio Backtest
+                </h3>
+
+                <a href="https://github.com/code50/160546343/blob/main/work/Website/fi-test.py" target="_blank" class="chart-repo-link">
+                    View Python Code <span class="icon" style="margin-left: 6px;">&lt;/&gt;</span>
+                </a>
+            </div>
+
+            <canvas id="portfolioChart" height="100"></canvas>
+        </div>
+
+       <div class="carousel-container">
+            <div class="carousel-track" id="projectTrack">
+
+                <a href="https://github.com/code50/160546343.git" target="_blank" class="project-card carousel-card">
+                    <img src="https://images.pexels.com/photos/6801874/pexels-photo-6801874.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Finance Platform" class="project-img">
+                    <div class="project-content">
+                        <span class="project-tags" data-i18n="proj_1_tag">Python | SQL | Web App</span>
+                        <h2 class="project-title" data-i18n="proj_1_title">CS50 Finance Platform</h2>
+                        <p class="text-block" style="margin-bottom: 0;" data-i18n="proj_1_desc">Developed a web application allowing users to manage portfolios...</p>
+                    </div>
+                </a>
+
+                <!--<a href="https://github.com/yourusername/ai-project" target="_blank" class="project-card carousel-card">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800" alt="AI Debugging" class="project-img">
+                    <div class="project-content">
+                        <span class="project-tags" data-i18n="proj_2_tag">Python | Logic Optimization</span>
+                        <h2 class="project-title" data-i18n="proj_2_title">AI Model Debugging</h2>
+                        <p class="text-block" style="margin-bottom: 0;" data-i18n="proj_2_desc">Evaluated and refined unreleased features of industry-leading AI models...</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/yourusername/trading-bot" target="_blank" class="project-card carousel-card">
+                    <img src="https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Backtesting" class="project-img">
+                    <div class="project-content">
+                        <span class="project-tags" data-i18n="proj_3_tag">Python | Pandas | Matplotlib</span>
+                        <h2 class="project-title" data-i18n="proj_3_title">Algorithmic Backtesting</h2>
+                        <p class="text-block" style="margin-bottom: 0;" data-i18n="proj_3_desc">Built a quantitative backtesting engine to simulate historical trading strategies...</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/yourusername/tax-automation" target="_blank" class="project-card carousel-card">
+                    <img src="https://images.pexels.com/photos/5466826/pexels-photo-5466826.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tax Automation" class="project-img">
+                    <div class="project-content">
+                        <span class="project-tags" data-i18n="proj_4_tag">Excel | VBA | Accounting</span>
+                        <h2 class="project-title" data-i18n="proj_4_title">Automated Tax & Invoicing</h2>
+                        <p class="text-block" style="margin-bottom: 0;" data-i18n="proj_4_desc">Engineered a custom spreadsheet solution to automate cross-border tax compliance...</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/yourusername/macro-dash" target="_blank" class="project-card carousel-card">
+                    <img src="https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Dashboard" class="project-img">
+                    <div class="project-content">
+                        <span class="project-tags" data-i18n="proj_5_tag">Python | APIs | Data Viz</span>
+                        <h2 class="project-title" data-i18n="proj_5_title">Macroeconomic Dashboard</h2>
+                        <p class="text-block" style="margin-bottom: 0;" data-i18n="proj_5_desc">Created a live dashboard pulling data from central bank APIs to track inflation...</p>
+                    </div>
+                </a>-->
+
+            </div>
+
+            <!--<div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn">←</button>
+                <button class="carousel-btn" id="nextBtn">→</button>
+            </div>
+        </div>-->
+
+        <footer>
+            <p>&copy; 2026 Oskar Kitson. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="lang.js" charset="utf-8"></script>
+    <script>
+        // Interactive Chart Rendering
+        const ctx = document.getElementById('portfolioChart').getContext('2d');
+        const portfolioChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Q1 2020",
+        "Q2 2020",
+        "Q3 2020",
+        "Q4 2020",
+        "Q1 2021",
+        "Q2 2021",
+        "Q3 2021",
+        "Q4 2021",
+        "Q1 2022",
+        "Q2 2022",
+        "Q3 2022",
+        "Q4 2022",
+        "Q1 2023",
+        "Q2 2023",
+        "Q3 2023",
+        "Q4 2023",
+        "Q1 2024",
+        "Q2 2024",
+        "Q3 2024",
+        "Q4 2024",
+        "Q1 2025",
+        "Q2 2025",
+        "Q3 2025",
+        "Q4 2025",
+        "Q1 2026"],
+                datasets: [{
+                    label: 'Algorithmic Portfolio Return',
+                    data: [85.67,
+        108.98,
+        121.3,
+        136.91,
+        141.33,
+        155.96,
+        157.45,
+        175.15,
+        162.01,
+        128.58,
+        122.67,
+        125.3,
+        146.1,
+        165.49,
+        160.58,
+        182.59,
+        199.25,
+        213.13,
+        219.83,
+        229.05,
+        213.07,
+        246.39,
+        267.86,
+        274.64,
+        272.94],
+                    borderColor: '#1a5336', backgroundColor: 'rgba(26, 83, 54, 0.1)', borderWidth: 3, fill: true, tension: 0.4
+                },
+                {
+                    label: 'S&P 500 Benchmark',
+                    data: [79.81,
+        95.9,
+        104.56,
+        117.24,
+        124.68,
+        135.1,
+        135.88,
+        150.92,
+        143.95,
+        120.76,
+        114.81,
+        123.49,
+        132.7,
+        144.21,
+        139.56,
+        155.81,
+        172.0,
+        179.53,
+        189.86,
+        194.58,
+        186.28,
+        206.36,
+        223.12,
+        229.06,
+        230.43],
+                    borderColor: '#cbd5e1', borderWidth: 2, borderDash: [5, 5], fill: false, tension: 0.4
+                }]
+            },
+            options: { responsive: true, plugins: { legend: { position: 'top' } }, scales: { y: { beginAtZero: false } } }
+        });
+
+        // Carousel Arrow Navigation Logic
+        const track = document.getElementById('projectTrack');
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            const cardWidth = document.querySelector('.carousel-card').offsetWidth;
+            track.scrollBy({ left: cardWidth + 30, behavior: 'smooth' }); // 30 is the gap
+        });
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            const cardWidth = document.querySelector('.carousel-card').offsetWidth;
+            track.scrollBy({ left: -(cardWidth + 30), behavior: 'smooth' });
+        });
+
+        // Page Transition Logic
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.hostname === window.location.hostname && this.target !== '_blank' && !this.href.startsWith('mailto:')) {
+                    e.preventDefault();
+                    let target = this.href;
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => { window.location.href = target; }, 350);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oskar Kitson | Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="nav-brand">OK.</a>
+                <div class="nav-links" style="display: flex; align-items: center;">
+                    <a href="index.html" class="active" data-i18n="nav_profile">Profile</a>
+                    <a href="experience.html" data-i18n="nav_experience">Experience</a>
+                    <a href="projects.html" data-i18n="nav_projects">Projects</a>
+                    <a href="education.html" data-i18n="nav_education">Education</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contact</a>
+
+                    <!--div class="lang-switcher">
+                        <button id="btn-en" class="lang-btn active">EN</button>
+                        <button id="btn-nl" class="lang-btn">NL</button>
+                        <button id="btn-pl" class="lang-btn">PL</button>
+                    </div-->
+                </div>
+            </div>
+        </nav>
+        <div class="grid-2">
+            <div>
+                <h1 class="section-title" data-i18n="hero_title">Oskar Kitson</h1>
+                <p class="lead-text" data-i18n="hero_subtitle">Analytical BSc Economics student with a focus on rigorous financial analysis and data-driven solutions.</p>
+
+                <p class="text-block" data-i18n="hero_p1">I am currently studying at the University of Amsterdam, applying a unique combination of quantitative, technical, and entrepreneurial experience. Modern finance requires a sharp eye for detail and the ability to navigate complex data.</p>
+
+                <p class="text-block" data-i18n="hero_p2">Running a sole proprietorship while studying in a foreign country has taught me a high level of personal responsibility. I independently manage all financial and legal aspects of a sole-proprietorship across two countries, including accounting and tax compliance.</p>
+
+                <a href="experience.html" class="btn btn-primary" data-i18n="btn_experience">View Experience <span class="btn-icon">→</span></a>
+            </div>
+
+            <div class="profile-img-container">
+                <img src="https://tasmanic.b-cdn.net/wp-content/uploads/2025/01/waarom-heet-apple-apple.jpeg" alt="Oskar Kitson" class="profile-img">
+            </div>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2026 Oskar Kitson. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="lang.js" charset="utf-8"></script>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.hostname === window.location.hostname && this.target !== '_blank') {
+                    e.preventDefault();
+                    let target = this.href;
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => { window.location.href = target; }, 350);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
